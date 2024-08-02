@@ -1,13 +1,13 @@
 import Button from "@mui/material/Button";
 import "./App.css";
 import AccessAlarmIcon from "@mui/icons-material/AccessAlarm";
+import Navbar from "./components/Header/Navbar";
+import SideNavbar from "./components/Header/SideNavbar";
 function App() {
   return (
     <>
-      <Button variant="text">Text</Button>
-      <Button variant="contained">Contained</Button>
-      <Button variant="outlined">Outlined</Button>
-      <AccessAlarmIcon />
+      <Navbar />
+      {/* <SideNavbar /> */}
     </>
   );
 }
