@@ -1,5 +1,7 @@
 import { styled, alpha } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
+// import MenuItem from "@mui/material/MenuItem";
+import IconButton from "@mui/material/IconButton";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -41,4 +43,18 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-export { Search, SearchIconWrapper, StyledInputBase };
+const StyledIconButton = styled(IconButton)(({ theme }) => ({
+  backgroundColor: "#45474c", // Apply red background
+  width: "35px",
+  height: "35px",
+  marginTop: "12px",
+  color: "white", // Apply white text color
+  "&:hover": {
+    backgroundColor: "darkred", // Change background on hover
+  },
+  marginInline: "6px",
+  //   display: "flex",
+  //   alignItems: "center",
+}));
+
+export { Search, SearchIconWrapper, StyledInputBase, StyledIconButton };

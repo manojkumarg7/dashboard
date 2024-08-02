@@ -5,19 +5,27 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
-// import Badge from "@mui/material/Badge";
+import Badge from "@mui/material/Badge";
+import MailOutlineOutlinedIcon from "@mui/icons-material/MailOutlineOutlined";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import AccountCircle from "@mui/icons-material/AccountCircle";
-import MailIcon from "@mui/icons-material/Mail";
-import NotificationsIcon from "@mui/icons-material/Notifications";
-import SettingsIcon from "@mui/icons-material/Settings";
+// import MailIcon from "@mui/icons-material/Mail";
+// import NotificationsIcon from "@mui/icons-material/Notifications";
+import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
+// import SettingsIcon from "@mui/icons-material/Settings";
+import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import Avatar from "@mui/material/Avatar";
 import NavbarStyle from "./Navbar";
-import { Search, SearchIconWrapper, StyledInputBase } from "./NavbarStyle";
+import {
+  Search,
+  SearchIconWrapper,
+  StyledInputBase,
+  StyledIconButton,
+} from "./NavbarStyle";
 
 export default function Navbar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -85,20 +93,21 @@ export default function Navbar() {
       <MenuItem>
         <IconButton size="large" aria-label="show 4 new mails" color="inherit">
           {/* <Badge badgeContent={4} color="error"> */}
-          <MailIcon />
+          <MailOutlineOutlinedIcon />
           {/* </Badge> */}
         </IconButton>
         <p>Messages</p>
       </MenuItem>
       <MenuItem>
+        {/*  */}
         <IconButton
           size="large"
           aria-label="show 17 new notifications"
           color="inherit"
         >
-          {/* <Badge badgeContent={17} color="error"> */}
-          <NotificationsIcon />
-          {/* </Badge> */}
+          <Badge badgeContent={17} variant="dot" color="primary">
+            <NotificationsNoneOutlinedIcon />
+          </Badge>
         </IconButton>
         <p>Notifications</p>
       </MenuItem>
@@ -109,7 +118,7 @@ export default function Navbar() {
           color="inherit"
         >
           {/* <Badge badgeContent={17} color="error"> */}
-          <SettingsIcon />
+          <SettingsOutlinedIcon />
           {/* </Badge> */}
         </IconButton>
         <p>settingIcon</p>
@@ -135,7 +144,7 @@ export default function Navbar() {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" style={{ backgroundColor: "#1f2029s" }}>
+      <AppBar position="static" style={{ backgroundColor: "#1f2029" }}>
         <Toolbar>
           <IconButton
             size="large"
@@ -165,33 +174,33 @@ export default function Navbar() {
           </Search>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
-            <IconButton
+            <StyledIconButton
               size="large"
               aria-label="show 4 new mails"
               color="inherit"
             >
               {/* <Badge badgeContent={4} color="error"> */}
-              <MailIcon />
+              <MailOutlineOutlinedIcon />
               {/* </Badge> */}
-            </IconButton>
-            <IconButton
+            </StyledIconButton>
+            <StyledIconButton
               size="large"
               aria-label="show 17 new notifications"
               color="inherit"
             >
               {/* <Badge badgeContent={17} color="error"> */}
-              <SettingsIcon />
+              <SettingsOutlinedIcon />
               {/* </Badge> */}
-            </IconButton>
-            <IconButton
+            </StyledIconButton>
+            <StyledIconButton
               size="large"
               aria-label="show 17 new notifications"
               color="inherit"
             >
-              {/* <Badge badgeContent={17} color="error"> */}
-              <NotificationsIcon />
-              {/* </Badge> */}
-            </IconButton>
+              <Badge color="primary" variant="dot">
+                <NotificationsNoneOutlinedIcon />
+              </Badge>
+            </StyledIconButton>
             <IconButton
               size="large"
               edge="end"
