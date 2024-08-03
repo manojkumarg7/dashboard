@@ -2,6 +2,7 @@ import React from "react";
 import { SessionStyle } from "./SessionStyle";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 const SessionsComp = () => {
   const sessionData = [
     {
@@ -35,18 +36,23 @@ const SessionsComp = () => {
   ];
   return (
     <SessionStyle>
-      <h2>Dashboard</h2>
+      {/* <h2>Dashboard</h2> */}
       <div className="session-wrapper">
-        <div className="conatiner">
-          {sessionData.map((sessionValue, index) => {
-            return (
-              <div className="box" key={index}>
-                <div>{sessionValue.icon}</div>
-                <h5>{sessionValue.title}</h5>
+        {sessionData.map((sessionValue, index) => {
+          return (
+            <div className="session-container" key={index}>
+              <div>{sessionValue.icon}</div>
+              <p>{sessionValue.title}</p>
+              <div className="session-footer">
+                <h1>{sessionValue.value}</h1>
+                <h5 sx={{ paddingLeft: "30px" }}>
+                  {sessionValue.percentage}
+                  {/* <ArrowDropDownIcon /> */}
+                </h5>
               </div>
-            );
-          })}
-        </div>
+            </div>
+          );
+        })}
       </div>
     </SessionStyle>
   );

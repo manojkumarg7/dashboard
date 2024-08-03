@@ -6,10 +6,12 @@ import SideNavbar from "./components/Header/SideNavbar";
 import OpenDrawer from "./components/Header/OpenDrawer";
 import { Dashboard } from "@mui/icons-material";
 import DashboardPage from "./pages/Home/DashboardPage";
+import NetProfit from "./components/NetProfit/NetProfit";
 function App() {
   return (
     <>
       <DashboardPage />
+      {/* <NetProfit /> */}
     </>
   );
 }
