@@ -44,17 +44,15 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 const StyledIconButton = styled(IconButton)(({ theme }) => ({
-  backgroundColor: "#45474c", // Apply red background
+  backgroundColor: "#45474c",
   width: "35px",
   height: "35px",
   marginTop: "12px",
-  color: "white", // Apply white text color
+  color: "white",
   "&:hover": {
-    backgroundColor: "darkred", // Change background on hover
+    backgroundColor: "gray",
   },
   marginInline: "6px",
-  //   display: "flex",
-  //   alignItems: "center",
 }));
 
 export { Search, SearchIconWrapper, StyledInputBase, StyledIconButton };
