@@ -4,7 +4,7 @@ import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 const NetProfit = () => {
   return (
     <NetProfitStyle>
-      <React.Fragment className="net-wrapper">
+      <React.Fragment>
         <div className="netprofit-container">
           <div className="net-container">
             <p>Net Profit</p>

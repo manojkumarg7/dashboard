@@ -7,11 +7,19 @@ import OpenDrawer from "./components/Header/OpenDrawer";
 import { Dashboard } from "@mui/icons-material";
 import DashboardPage from "./pages/Home/DashboardPage";
 import NetProfit from "./components/NetProfit/NetProfit";
+import RecentOrder from "./components/RecentOrders/RecentOrder";
+import Feedback from "./components/Feedback/Feedback";
+import Goals from "./components/Goals/Goals";
+import BarChart from "./components/BarChart/BarChart";
 function App() {
   return (
     <>
-      <DashboardPage />
+      {/* <DashboardPage /> */}
       {/* <NetProfit /> */}
+      {/* <RecentOrder /> */}
+      {/* <Feedback /> */}
+      <BarChart />
+      {/* <Goals /> */}
     </>
   );
 }
